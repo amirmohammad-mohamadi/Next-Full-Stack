@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import rome from "@/public/images/rome2.jpg";
 import { Metadata } from "next";
+import { authOptions } from "./api/auth/authOptions";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
