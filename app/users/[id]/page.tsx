@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
 
@@ -11,3 +12,13 @@ const UserDetailPage = ({ params: { id } }: IUserDetailPage) => {
 };
 
 export default UserDetailPage;
+
+// use dynamic Metadata
+export async function generateMetadata(): Promise<Metadata> {
+  // const user = await fetch("");
+
+  return {
+    title: "user.name",
+    description: "user.description",
+  };
+}
